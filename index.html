@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#personal">Personal Info</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#java">Java Code</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="personal">
+            <h1>Personal Information</h1>
+            <div class="content">
+                <h2>John Michael Galang</h2>
+                <p><strong>Email:</strong> johnmichaelgalang56@gmail.com</p>
+                <p><strong>Phone:</strong> 09638535990</p>
+                <p><strong>Location:</strong> Triala Guimba, Nueva Ecija</p>
+                <p>
+                    Ola, I'm a college student from OLSCHO who tries their best and takes mistakes as another chance to change. My little hobbies I like to do are taking care of farm animals and a lot of gardening.
+                </p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h1>Educational Background</h1>
+            <div class="content">
+                <div class="item">
+                    <h3>College</h3>
+                    <p>Our Lady of the Sacred Heart College of Guimba Inc.</p>
+                    <p>2025 – 2026 (Current)</p>
+                </div>
+                <div class="item">
+                    <h3>Senior High School</h3>
+                    <p>Our Lady of the Sacred Heart College of Guimba Inc.</p>
+                    <p>2024 – 2025</p>
+                </div>
+                <div class="item">
+                    <h3>Junior High School</h3>
+                    <p>Our Lady of the Sacred Heart College of Guimba Inc.</p>
+                    <p>2020 – 2024</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h1>Skills</h1>
+            <div class="content">
+                <ul>
+                    <li>Basic Communication</li>
+                    <li>Deep Understanding Of Myself & Own Beliefs</li>
+                    <li>Basic Problem Solving</li>
+                    <li>Independent And Responsible</li>
+                    <li>Approachable & Friendly</li>
+                    <li>& Can Collaborate Respectfully</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="java">
+            <h1>Java Code – Console-Based Program (CC102 PeTa)</h1>
+            <div class="content">
+                <p>Final Performance Task: Gasoline Tracker developed in CC102.</p>
+                <pre><code>import java.util.Scanner;
+
+public class GasolineTracker {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        double[] fuel = new double[10];
+
+        // Input 10 vehicles consumed oil
+        System.out.println("Enter fuel consumption (in liters) for 10 vehicles:");
+        for (int Mantika = 0; Mantika &lt; 10; Mantika++) {
+            do {
+                System.out.print("Vehicle " + (Mantika + 1) + ": ");
+                fuel[Mantika] = input.nextDouble();
+                if (fuel[Mantika] &lt; 0) {
+                    System.out.println("Invalid! Please enter a nonnegative value.");
+                }
+            } while (fuel[Mantika] &lt; 0);
+        }
+
+        // Calculate the Total oil consumed and the average of it
+        double total = 0;
+        for (int Mantika = 0; Mantika &lt; 10; Mantika++) {
+            total += fuel[Mantika];
+        }
+        double average = total / 10;
+
+        // Find the highest and lowest
+        double highest = fuel[0];
+        double lowest = fuel[0];
+        for (int Mantika = 1; Mantika &lt; 10; Mantika++) {
+            if (fuel[Mantika] &gt; highest) {
+                highest = fuel[Mantika];
+            }
+            if (fuel[Mantika] &lt; lowest) {
+                lowest = fuel[Mantika];
+            }
+        }
+
+        // Count vehicles more than 20 liters of oil
+        int count = 0;
+        for (int Mantika = 0; Mantika &lt; 10; Mantika++) {
+            if (fuel[Mantika] &gt; 20) {
+                count++;
+            }
+        }
+
+        // Display the results of oil related stuff or smth
+        System.out.println("Total fuel consumption: " + total + " liters");
+        System.out.println("Average fuel consumption: " + average + " liters");
+        System.out.println("Highest consumption: " + highest + " liters");
+        System.out.println("Lowest consumption: " + lowest + " liters");
+        System.out.println("Vehicles consuming more than 20 liters: " + count);
+    }
+}</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 John Michael Galang. All rights reserved.</p>
+    </footer>
+</body>
+</html>
